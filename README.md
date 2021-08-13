@@ -106,7 +106,7 @@ Once you are done importing files from Chromium you need to adapt the code of Ki
                  workflow "Chromium: Import file"
 ```
 
-If you import an image (a reource in a `drawable` or a `mipmap` folder), for example `chrome/android/java/res/drawable-hdpi/btn_left.png` then the workflow will automatically import `chrome/android/java/res/drawable-*/btn_left.png` so you don't need to run the workflow for each resolution folder.
+If you import an image (a resource in a `drawable` or a `mipmap` folder), for example `chrome/android/java/res/drawable-hdpi/btn_left.png` then the workflow will automatically import `chrome/android/java/res/drawable-*/btn_left.png` so you don't need to run the workflow for each resolution folder.
 
 ## Changing Chromium version (advanced)
 
@@ -140,6 +140,36 @@ When you accept a pull request:
 
  - If the source repository has multiple commits for the fix or the commit names are not very explicit or messy, use `Squash and merge`.
 
+## Workflow
+
+This repository is using GitHub Actions workflows.
+
+Workflows can be accessed in the "Actions" tab on top of the page.
+Workflows starting with "Kiwi:" are executed on the branch "kiwi".
+Workflows starting with "Chromium:" are executed on the branch "chromium".
+
+In "kiwi" branch you can find the source-code, assets and tools that are used to build Kiwi Browser.
+
+In "chromium" branch you can find a replica of the Chromium repository.
+To keep the size of the repository small, we replicate only the files that are changed in Kiwi Browser.
+Use workflow "Chromium: Import" to add a new file to be replicated.
+Use workflow "Chromium: Update files from upstream" to update the replica.
+
+## Workflow
+
+This repository is using GitHub Actions workflows.
+
+Workflows can be accessed in the "Actions" tab on top of the page.
+Workflows starting with "Kiwi:" are executed on the branch "kiwi".
+Workflows starting with "Chromium:" are executed on the branch "chromium".
+
+In "kiwi" branch you can find the source-code, assets and tools that are used to build Kiwi Browser.
+
+In "chromium" branch you can find a replica of the Chromium repository.
+To keep the size of the repository small, we replicate only the files that are changed in Kiwi Browser.
+Use workflow "Chromium: Import" to add a new file to be replicated.
+Use workflow "Chromium: Update files from upstream" to update the replica.
+
 ## Navigating the source-code
 
 Kiwi is based on Chromium, to find code, use https://source.chromium.org/chromium/chromium/src
@@ -157,6 +187,17 @@ HTML:
 Translations:
  - To add a new translation string in English: `chrome/android/java/res/values/strings.xml`
  - To translate strings in other languages, go to https://crowdin.com/project/kiwibrowser and once you have updated the translations, run workflow `"Kiwi: Download translations from Crowdin"` to download them back to the repository
+
+## License
+
+This repository is licensed under the same license as Chromium.
+Chromium uses a very permissive and advantageous license. To keep this freedom we don't want to include code from much more restrictive licenses (for example GPL, or CC-NC).
+
+Google has established a list of licenses that shouldn't be included in Chromium, we follow this list, and you can find the list below.
+
+See `restricted` in https://opensource.google/docs/thirdparty/licenses/
+
+Verify before proposing code to Kiwi Browser that the code doesn't come from such restricted projects.
 
 ## License
 
@@ -259,6 +300,126 @@ it's slightly more convenient if you write:
 ```
 
 This way, when adding a new domain, or a new exception in general, the developer only needs to copy-paste the line, and this is very convenient (especially for the contributors on mobile).
+
+## Navigating the source-code
+
+Kiwi is based on Chromium, to find code, use https://source.chromium.org/chromium/chromium/src
+
+The most important to know is:
+
+Android:
+ - Main menu is in: chrome/android/java/src/org/chromium/chrome/browser/app/appmenu
+ - Settings screen is in: chrome/android/java/src/org/chromium/chrome/browser/settings and chrome/android/java/res/xml
+
+HTML:
+ - kiwi://extensions is in: chrome/browser/resources/extensions
+ - kiwi://chrome-search (new tab page) is in: chrome/browser/resources/new_tab_page_instant
+
+Translations:
+ - To add a new translation string in English: chrome/android/java/res/values/strings.xml
+ - To translate strings in other languages, go to https://crowdin.com/project/kiwibrowser and once you have updated the translations, run GitHub Action "Download translations from Crowdin" to download them back to the repository
+
+## Code style
+
+Follow the Chromium code style with one exception:
+
+This may sound counter-intuitive, but as much as possible, do not delete code from Chromium and keep the original code of Chromium as much as possible even if it will become unused code.
+
+For example, in the C++ code, if a segment of the code doesn't make sense on Android, wrap the whole block of code with #if 0 and #endif.
+
+In the Java code, add, if (false) in front of code segments that are unused.
+
+If you rewrite a small function, no need to worry about this. You can overwrite it but try to stick as close as possible to the original.
+
+The reason: We want a script to manages the rebase and upgrading the Chromium version, we do not want a human to fix it.
+
+When Chromium refactors significant amount of code, they delete significant portions of code, or rewrite the inner-working of functions (e.g. extension APIs) and then we end up with a conflict.
+
+If you keep all the code, and just put it in a #if 0, then the changes are done by Chromium team, but you don't have to worry about conflicts.
+
+The code is not conceptually correct, but it's easier to maintain.
+
+This also makes it easier for your fellow developers to spot where Kiwi specific modification exists.
+
+## Navigating the source-code
+
+Kiwi is based on Chromium, to find code, use https://source.chromium.org/chromium/chromium/src
+
+The most important to know is:
+
+Android:
+ - Main menu is in: chrome/android/java/src/org/chromium/chrome/browser/app/appmenu
+ - Settings screen is in: chrome/android/java/src/org/chromium/chrome/browser/settings and chrome/android/java/res/xml
+
+HTML:
+ - kiwi://extensions is in: chrome/browser/resources/extensions
+ - kiwi://chrome-search (new tab page) is in: chrome/browser/resources/new_tab_page_instant
+
+Translations:
+ - To add a new translation string in English: chrome/android/java/res/values/strings.xml
+ - To translate strings in other languages, go to https://crowdin.com/project/kiwibrowser and once you have updated the translations, run GitHub Action "Download translations from Crowdin" to download them back to the repository
+
+## Code style
+
+Follow the Chromium code style with one exception:
+
+This may sound counter-intuitive, but as much as possible, do not delete code from Chromium and keep the original code of Chromium as much as possible even if it will become unused code.
+
+For example, in the C++ code, if a segment of the code doesn't make sense on Android, wrap the whole block of code with #if 0 and #endif.
+
+In the Java code, add, if (false) in front of code segments that are unused.
+
+If you rewrite a small function, no need to worry about this. You can overwrite it but try to stick as close as possible to the original.
+
+The reason: We want a script to manages the rebase and upgrading the Chromium version, we do not want a human to fix it.
+
+When Chromium refactors significant amount of code, they delete significant portions of code, or rewrite the inner-working of functions (e.g. extension APIs) and then we end up with a conflict.
+
+If you keep all the code, and just put it in a #if 0, then the changes are done by Chromium team, but you don't have to worry about conflicts.
+
+The code is not conceptually correct, but it's easier to maintain.
+
+This also makes it easier for your fellow developers to spot where Kiwi specific modification exists.
+
+## Navigating the source-code
+
+Kiwi is based on Chromium, to find code, use https://source.chromium.org/chromium/chromium/src
+
+The most important to know is:
+
+Android:
+ - Main menu is in: chrome/android/java/src/org/chromium/chrome/browser/app/appmenu
+ - Settings screen is in: chrome/android/java/src/org/chromium/chrome/browser/settings and chrome/android/java/res/xml
+
+HTML:
+ - kiwi://extensions is in: chrome/browser/resources/extensions
+ - kiwi://chrome-search (new tab page) is in: chrome/browser/resources/new_tab_page_instant
+
+Translations:
+ - To add a new translation string in English: chrome/android/java/res/values/strings.xml
+ - To translate strings in other languages, go to https://crowdin.com/project/kiwibrowser and once you have updated the translations, run GitHub Action "Download translations from Crowdin" to download them back to the repository
+
+## Code style
+
+Follow the Chromium code style with one exception:
+
+This may sound counter-intuitive, but as much as possible, do not delete code from Chromium and keep the original code of Chromium as much as possible even if it will become unused code.
+
+For example, in the C++ code, if a segment of the code doesn't make sense on Android, wrap the whole block of code with #if 0 and #endif.
+
+In the Java code, add, if (false) in front of code segments that are unused.
+
+If you rewrite a small function, no need to worry about this. You can overwrite it but try to stick as close as possible to the original.
+
+The reason: We want a script to manages the rebase and upgrading the Chromium version, we do not want a human to fix it.
+
+When Chromium refactors significant amount of code, they delete significant portions of code, or rewrite the inner-working of functions (e.g. extension APIs) and then we end up with a conflict.
+
+If you keep all the code, and just put it in a #if 0, then the changes are done by Chromium team, but you don't have to worry about conflicts.
+
+The code is not conceptually correct, but it's easier to maintain.
+
+This also makes it easier for your fellow developers to spot where Kiwi specific modification exists.
 
 ## Adding a new setting
 
