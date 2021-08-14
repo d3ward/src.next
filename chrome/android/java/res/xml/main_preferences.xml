@@ -34,6 +34,7 @@
         android:fragment="org.chromium.chrome.browser.search_engines.settings.SearchEngineSettings"
         android:key="search_engine"
         android:order="6"
+        android:icon="@drawable/ic_extensions"
         android:title="@string/search_engine_settings"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.password_manager.settings.PasswordSettings"
