@@ -528,9 +528,8 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
 +   " if (typeof _kbOverscroll == 'undefined' || _kbOverscroll == false) {"
 +        "d.getElementsByTagName('html')[0].style.transition = '0.5s ease-in-out';"
 +        "d.getElementsByTagName('html')[0].style.transform = 'translate(0px, 98vw)';"
-+        "d.getElementsByTagName('html')[0].style.overflowY = 'initial';"
++        "d.getElementsByTagName('html')[0].style.overflow = 'hidden';"
 +        "d.getElementsByTagName('body')[0].style.display='block';"
-+        "d.getElementsByTagName('body')[0].style.position='fixed';"
 +        "d.getElementsByTagName('body')[0].style.overflowY='scroll';"
 +        "d.getElementsByTagName('body')[0].style.height='98vw';"
 +        "window.scrollTo({top: 0,left: 0,behavior: 'smooth' });"
@@ -540,7 +539,6 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
 +        "d.getElementsByTagName('html')[0].style.transform = '';"
 +        "d.getElementsByTagName('html')[0].style.overflowY = 'initial';"
 +        "d.getElementsByTagName('body')[0].style.display='';"
-+        "d.getElementsByTagName('body')[0].style.position='initial';"
 +        "d.getElementsByTagName('body')[0].style.overflowY='auto';"
 +        "d.getElementsByTagName('body')[0].style.height='';"
 +        "_kbOverscroll = false;}}(document));";
