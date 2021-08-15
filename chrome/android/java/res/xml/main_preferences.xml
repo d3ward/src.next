@@ -43,21 +43,22 @@
         android:icon="@drawable/ic_extensions"
         android:title="@string/options_homepage_title"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
+        android:fragment="org.chromium.chrome.browser.language.settings.LanguageSettings"
+        android:key="languages"
+        android:order="8"
+        android:icon="@drawable/ic_extensions"
+        android:title="@string/language_settings"/>
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.password_manager.settings.PasswordSettings"
         android:key="passwords"
         android:order="8"
         android:icon="@drawable/ic_extensions"
         android:title="@string/password_settings_title"/>
-    <org.chromium.components.browser_ui.settings.ChromeBasePreference
-        android:fragment="org.chromium.chrome.browser.language.settings.LanguageSettings"
-        android:key="languages"
-        android:order="9"
-        android:icon="@drawable/ic_extensions"
-        android:title="@string/language_settings"/>
+    
 
     <PreferenceCategory
         android:key="online_shopping_section"
-        android:order="10"
+        android:order="9"
         android:title="Online Shopping"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.autofill.settings.AutofillProfilesFragment"
