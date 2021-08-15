@@ -116,6 +116,7 @@
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.safety_check.SafetyCheckSettingsFragment"
         android:key="safety_check"
+<<<<<<< HEAD
         android:order="14"
         android:icon="@drawable/ic_extensions"
         android:title="@string/prefs_safety_check"/>
@@ -133,11 +134,25 @@
         android:summary="@string/clear_browsing_data_summary"
         android:fragment="org.chromium.chrome.browser.browsing_data.ClearBrowsingDataTabsFragment"/>
 
+=======
+        android:order="13"
+        android:title="@string/prefs_safety_check"/>
+    <Preference
+        android:key="notifications"
+        android:order="15"
+        android:title="@string/prefs_notifications"/>
+    <Preference
+        android:fragment="org.chromium.chrome.browser.night_mode.settings.ThemeSettingsFragment"
+        android:key="ui_theme"
+        android:order="11"
+        android:title="@string/theme_settings" />
+>>>>>>> Reorder main_preferences - Test 1
 
     <PreferenceCategory
         android:key="advanced_section"
         android:order="17"
         android:title="@string/prefs_section_advanced"/>
+<<<<<<< HEAD
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:key="notifications"
         android:order="18"
@@ -150,12 +165,53 @@
         android:icon="@drawable/ics_accessibility"
         android:title="@string/prefs_accessibility"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
+=======
+    <Preference
+        android:fragment="org.chromium.chrome.browser.homepage.settings.HomepageSettings"
+        android:key="homepage"
+        android:order="7"
+        android:title="@string/options_homepage_title"/>
+    <Preference
+        android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
+        android:key="toolbar_shortcut"
+        android:order="11"
+        android:title="@string/toolbar_shortcut"/>
+    <Preference
+        android:fragment="org.chromium.chrome.browser.accessibility.settings.AccessibilitySettings"
+        android:key="accessibility"
+        android:order="15"
+        android:title="@string/prefs_accessibility"/>
+    <Preference
+        android:fragment="org.chromium.components.browser_ui.site_settings.SiteSettings"
+        android:key="content_settings"
+        android:order="13"
+        android:title="@string/prefs_site_settings"/>
+    <Preference
+        android:fragment="org.chromium.chrome.browser.language.settings.LanguageSettings"
+        android:key="languages"
+        android:order="7"
+        android:title="@string/language_settings"/>
+    <Preference
+>>>>>>> Reorder main_preferences - Test 1
         android:fragment="org.chromium.chrome.browser.translate.settings.TranslateSettings"
         android:key="translate"
         android:order="20"
         android:icon="@drawable/ic_translate_r"
         android:title="@string/main_menu_translate"/>
+<<<<<<< HEAD
     
+=======
+    <Preference
+        android:fragment="org.chromium.chrome.browser.settings.TabSwitcherSettings"
+        android:key="tabswitcher"
+        android:order="11"
+        android:title="@string/preferences_tabswitcher"/>
+    <Preference
+        android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
+        android:key="nightmode"
+        android:order="11"
+        android:title="@string/preferences_nightmode"/>
+>>>>>>> Reorder main_preferences - Test 1
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.datareduction.settings.DataReductionPreferenceFragment"
         android:key="data_reduction"
@@ -180,5 +236,20 @@
         android:order="23"
         android:icon="@drawable/btn_info"
         android:title="@string/prefs_about_chrome"/>
+<<<<<<< HEAD
     
+=======
+    <PreferenceCategory
+        android:key="privacy_section"
+        android:order="12"
+        android:title="Privacy&Security"/>
+    <PreferenceCategory
+        android:key="appearence_section"
+        android:order="10"
+        android:title="Customization and appearence"/>
+    <PreferenceCategory
+        android:key="online_shopping_section"
+        android:order="7"
+        android:title="Online Shopping"/>
+>>>>>>> Reorder main_preferences - Test 1
 </PreferenceScreen>
