@@ -41,6 +41,11 @@
         android:key="passwords"
         android:order="7"
         android:title="@string/password_settings_title"/>
+
+    <PreferenceCategory
+        android:key="online_shopping_section"
+        android:order="7"
+        android:title="Online Shopping"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.autofill.settings.AutofillPaymentMethodsFragment"
         android:key="autofill_payment_methods"
@@ -138,13 +143,10 @@
     <PreferenceCategory
         android:key="privacy_section"
         android:order="12"
-        android:title="Privacy&Security"/>
+        android:title="PrivacyAndSecurity"/>
     <PreferenceCategory
         android:key="appearence_section"
         android:order="10"
         android:title="Customization and appearence"/>
-    <PreferenceCategory
-        android:key="online_shopping_section"
-        android:order="7"
-        android:title="Online Shopping"/>
+    
 </PreferenceScreen>
