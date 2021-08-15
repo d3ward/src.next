@@ -54,21 +54,21 @@
     <Preference
         android:fragment="org.chromium.chrome.browser.privacy.settings.PrivacySettings"
         android:key="privacy"
-        android:order="10"
+        android:order="13"
         android:title="@string/prefs_privacy_security"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.safety_check.SafetyCheckSettingsFragment"
         android:key="safety_check"
-        android:order="11"
+        android:order="13"
         android:title="@string/prefs_safety_check"/>
     <Preference
         android:key="notifications"
-        android:order="12"
+        android:order="15"
         android:title="@string/prefs_notifications"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.night_mode.settings.ThemeSettingsFragment"
         android:key="ui_theme"
-        android:order="13"
+        android:order="11"
         android:title="@string/theme_settings" />
 
     <PreferenceCategory
@@ -78,27 +78,27 @@
     <Preference
         android:fragment="org.chromium.chrome.browser.homepage.settings.HomepageSettings"
         android:key="homepage"
-        android:order="15"
+        android:order="7"
         android:title="@string/options_homepage_title"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
         android:key="toolbar_shortcut"
-        android:order="16"
+        android:order="11"
         android:title="@string/toolbar_shortcut"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.accessibility.settings.AccessibilitySettings"
         android:key="accessibility"
-        android:order="17"
+        android:order="15"
         android:title="@string/prefs_accessibility"/>
     <Preference
         android:fragment="org.chromium.components.browser_ui.site_settings.SiteSettings"
         android:key="content_settings"
-        android:order="18"
+        android:order="13"
         android:title="@string/prefs_site_settings"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.language.settings.LanguageSettings"
         android:key="languages"
-        android:order="19"
+        android:order="7"
         android:title="@string/language_settings"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.translate.settings.TranslateSettings"
@@ -108,12 +108,12 @@
     <Preference
         android:fragment="org.chromium.chrome.browser.settings.TabSwitcherSettings"
         android:key="tabswitcher"
-        android:order="21"
+        android:order="11"
         android:title="@string/preferences_tabswitcher"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
         android:key="nightmode"
-        android:order="21"
+        android:order="11"
         android:title="@string/preferences_nightmode"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.datareduction.settings.DataReductionPreferenceFragment"
@@ -135,5 +135,16 @@
         android:key="about_chrome"
         android:order="23"
         android:title="@string/prefs_about_chrome"/>
-
+    <PreferenceCategory
+        android:key="privacy_section"
+        android:order="12"
+        android:title="Privacy&Security"/>
+    <PreferenceCategory
+        android:key="appearence_section"
+        android:order="10"
+        android:title="Customization and appearence"/>
+    <PreferenceCategory
+        android:key="online_shopping_section"
+        android:order="7"
+        android:title="Online Shopping"/>
 </PreferenceScreen>
