@@ -34,25 +34,25 @@
         android:fragment="org.chromium.chrome.browser.search_engines.settings.SearchEngineSettings"
         android:key="search_engine"
         android:order="6"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_search_engine"
         android:title="@string/search_engine_settings"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.homepage.settings.HomepageSettings"
         android:key="homepage"
         android:order="7"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_edit_homepage"
         android:title="@string/options_homepage_title"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.language.settings.LanguageSettings"
         android:key="languages"
         android:order="8"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_languages"
         android:title="@string/language_settings"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.password_manager.settings.PasswordSettings"
         android:key="passwords"
         android:order="8"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_passwords"
         android:title="@string/password_settings_title"/>
     
 
@@ -64,13 +64,13 @@
         android:fragment="org.chromium.chrome.browser.autofill.settings.AutofillProfilesFragment"
         android:key="autofill_addresses"
         android:order="10"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_addresses"
         android:title="@string/autofill_addresses_settings_title"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.autofill.settings.AutofillPaymentMethodsFragment"
         android:key="autofill_payment_methods"
         android:order="10"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_payments"
         android:title="@string/autofill_payment_methods"/>
     
 
@@ -82,19 +82,19 @@
         android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
         android:key="nightmode"
         android:order="11"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_night_mode"
         android:title="@string/preferences_nightmode"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.night_mode.settings.ThemeSettingsFragment"
         android:key="ui_theme"
         android:order="11"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_theme"
         android:title="@string/theme_settings" />
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.settings.TabSwitcherSettings"
         android:key="tabswitcher"
         android:order="11"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_tab_switcher"
         android:title="@string/preferences_tabswitcher"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
@@ -111,7 +111,7 @@
         android:fragment="org.chromium.chrome.browser.privacy.settings.PrivacySettings"
         android:key="privacy"
         android:order="13"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_privacy_security"
         android:title="@string/prefs_privacy_security"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.safety_check.SafetyCheckSettingsFragment"
@@ -123,12 +123,12 @@
         android:fragment="org.chromium.components.browser_ui.site_settings.SiteSettings"
         android:key="content_settings"
         android:order="15"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_website_settings"
         android:title="@string/prefs_site_settings"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:key="clear_browsing_data"
         android:order="16"
-        android:icon="@drawable/ic_clear_data"
+        android:icon="@drawable/ics_clear_data"
         android:title="@string/clear_browsing_data_title"
         android:summary="@string/clear_browsing_data_summary"
         android:fragment="org.chromium.chrome.browser.browsing_data.ClearBrowsingDataTabsFragment"/>
@@ -141,13 +141,13 @@
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:key="notifications"
         android:order="18"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_notifications"
         android:title="@string/prefs_notifications"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.accessibility.settings.AccessibilitySettings"
         android:key="accessibility"
         android:order="19"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_accessibility"
         android:title="@string/prefs_accessibility"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.translate.settings.TranslateSettings"
@@ -160,19 +160,19 @@
         android:fragment="org.chromium.chrome.browser.datareduction.settings.DataReductionPreferenceFragment"
         android:key="data_reduction"
         android:order="21"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_lite_mode"
         android:title="@string/data_reduction_title_lite_mode"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.download.settings.DownloadSettings"
         android:key="downloads"
         android:order="21"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ic_file_download_white_24dp"
         android:title="@string/menu_downloads"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.tracing.settings.DeveloperSettings"
         android:key="developer"
         android:order="22"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_dev_options"
         android:title="Developer options"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.about_settings.AboutChromeSettings"
