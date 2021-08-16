@@ -60,4 +60,11 @@
         app:primaryText="@string/main_menu_translate" />
 
   </org.chromium.components.browser_ui.widget.RadioButtonWithDescriptionLayout>
+
+    <org.chromium.chrome.browser.translate.settings.RadioButtonGroupTranslatePreference
+        android:key="translate_radio_group"
+        android:selectable="false"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="false" />
+
 </LinearLayout>
