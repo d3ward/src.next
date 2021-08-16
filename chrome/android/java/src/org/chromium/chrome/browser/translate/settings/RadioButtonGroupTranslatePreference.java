@@ -63,7 +63,7 @@ public final class RadioButtonGroupTranslatePreference
         super(context, attrs);
 
         // Inflating from XML.
-        setLayoutResource(R.layout.translate_preferences);
+        setLayoutResource(R.translate_preferences);
     }
 
     /**
