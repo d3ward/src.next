@@ -14,4 +14,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_CHAT }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Event name ${{ github.event_name }} ${{ github.ref }}
+        args: A new build of Kiwi Browser Next (preview version) is available. https://github.com/d3ward/src.next/releases/tag/${{ github.event.release.tag_name }}
