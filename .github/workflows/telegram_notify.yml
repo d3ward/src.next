@@ -9,14 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: seancroach/latest-stable-version-action@v1
-      id: latest-stable-version
-      with:
-        owner: d3ward
-        repo: src.next
     - name: send custom message with args
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_CHAT }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Event name ${{ github.event_name }} ${{ steps.latest-stable-version.outputs.result }}
+        args: Event name ${{ github.event_name }} ${{ github.ref }}
