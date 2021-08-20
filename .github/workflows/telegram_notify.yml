@@ -1,6 +1,5 @@
 name: telegram_notify
 on:
-  push:
   release:
     types: [published]
 
@@ -14,4 +13,7 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.telegram_token }}
           TELEGRAM_CHAT: ${{ secrets.telegram_chat }}
+        with:
+          commit_template: ./templates/releases.mustache
+          status: ${{job.status}}
 
