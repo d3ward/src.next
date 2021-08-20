@@ -1,7 +1,7 @@
 name: telegram_notify
 on:
   release:
-    type: [published]
+    types: [published]
 jobs:
 
   build:
