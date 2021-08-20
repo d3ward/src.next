@@ -19,4 +19,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_CHAT }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        args: Event name ${{ github.event_name }} ${{ latest-stable-version.outputs.result }}
+        args: Event name ${{ github.event_name }} ${{ steps.latest-stable-version.outputs.result }}
