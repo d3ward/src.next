@@ -200,7 +200,7 @@
     <PreferenceCategory
         android:key="privacy_section"
         android:order="12"
-        android:title="Privacy&Security"/>
+        android:title="Privacy&amp;Security"/>
     <PreferenceCategory
         android:key="appearence_section"
         android:order="10"
