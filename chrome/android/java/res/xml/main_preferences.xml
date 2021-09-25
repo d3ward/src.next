@@ -102,7 +102,7 @@
         android:order="11"
         android:icon="@drawable/ic_extensions"
         android:title="@string/toolbar_shortcut"/>
-        
+
      <PreferenceCategory
         android:key="privacy_section"
         android:order="12"
@@ -121,6 +121,7 @@
     <Preference
         android:key="notifications"
         android:order="15"
+        android:icon="@drawable/ics_notifications"
         android:title="@string/prefs_notifications"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.night_mode.settings.ThemeSettingsFragment"
@@ -149,24 +150,12 @@
         android:order="13"
         android:icon="@drawable/ics_website_settings"
         android:title="@string/prefs_site_settings"/>
-    <Preference
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.translate.settings.TranslateSettings"
         android:key="translate"
         android:order="20"
         android:icon="@drawable/ic_translate_r"
         android:title="@string/main_menu_translate"/>
-    <Preference
-        android:fragment="org.chromium.chrome.browser.settings.TabSwitcherSettings"
-        android:key="tabswitcher"
-        android:order="11"
-        android:icon="@drawable/ics_tab_switcher"
-        android:title="@string/preferences_tabswitcher"/>
-    <Preference
-        android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
-        android:key="nightmode"
-        android:order="11"
-        android:icon="@drawable/ics_night_mode"
-        android:title="@string/preferences_nightmode"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.datareduction.settings.DataReductionPreferenceFragment"
         android:key="data_reduction"
