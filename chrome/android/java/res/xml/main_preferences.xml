@@ -24,6 +24,8 @@
         android:order="15"
         android:layout="@layout/account_management_account_row"
         android:title="@string/prefs_google_services"
+         android:icon="@drawable/ics_services"
+         app:iconTint="@color/default_icon_color_tint_list"
         android:fragment="org.chromium.chrome.browser.sync.settings.GoogleServicesSettings"/>
 
     <PreferenceCategory
@@ -106,12 +108,16 @@
         android:title="@string/preferences_tabswitcher"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
+        android:key="toolbar_options"
+        android:order="11"
+        android:icon="@drawable/ics_toolbar_shortcut"
+        android:title="Toolbar Options"
+        app:iconTint="@color/default_icon_color_tint_list"/>
+    <Preference
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
         android:key="toolbar_shortcut"
         android:order="11"
-        android:icon="@drawable/ics_toolbar_shortcut"
-        android:title="@string/toolbar_shortcut"
-        app:iconTint="@color/default_icon_color_tint_list"/>
+        android:title="@string/toolbar_shortcut"/>
 
      <PreferenceCategory
         android:key="privacy_section"
