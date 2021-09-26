@@ -15,7 +15,7 @@ import org.chromium.chrome.browser.preferences.SharedPreferencesManager;
 import org.chromium.chrome.browser.profiles.Profile;
 import org.chromium.chrome.browser.ApplicationLifetime;
 import org.chromium.chrome.browser.util.ChromeAccessibilityUtil;
-import org.chromium.components.browser_ui.settings.ChromeSwitchPreference;
+import org.chromium.components.browser_ui.settings.ChromeBaseCheckBoxPreference;
 import org.chromium.components.browser_ui.settings.SettingsUtils;
 import org.chromium.components.user_prefs.UserPrefs;
 import org.chromium.content_public.browser.ContentFeatureList;
@@ -35,9 +35,9 @@ import android.content.SharedPreferences;
  */
 public class ToolbarSettings extends PreferenceFragmentCompat implements Preference.OnPreferenceChangeListener {
    
-    private ChromeSwitchPreference mKeepToolbar;
-    private ChromeSwitchPreference mSideSwipePref;
-    private ChromeSwitchPreference mTabSwitcherButtonPref;
+    private ChromeBaseCheckBoxPreference mKeepToolbar;
+    private ChromeBaseCheckBoxPreference mSideSwipePref;
+    private ChromeBaseCheckBoxPreference mTabSwitcherButtonPref;
     private Activity mActivity;
 
     @Override
@@ -45,26 +45,26 @@ public class ToolbarSettings extends PreferenceFragmentCompat implements Prefere
         getActivity().setTitle(R.string.preferences_tabswitcher);
         SettingsUtils.addPreferencesFromResource(this, R.xml.toolbar_preferences);
 
-        mTabSwitcherButtonPref = (ChromeSwitchPreference) findPreference("tabswitcher_opens_contextual_menu");
+        mTabSwitcherButtonPref = (ChromeBaseCheckBoxPreference) findPreference("tabswitcher_opens_contextual_menu");
         mTabSwitcherButtonPref.setOnPreferenceChangeListener(this);
 
-        mSideSwipePref = (ChromeSwitchPreference) findPreference("side_swipe_mode_enabled");
+        mSideSwipePref = (ChromeBaseCheckBoxPreference) findPreference("side_swipe_mode_enabled");
         mSideSwipePref.setOnPreferenceChangeListener(this);
         mSideSwipePref.setChecked(ContextUtils.getAppSharedPreferences().getBoolean("side_swipe_mode_enabled", true));
 
-        ChromeSwitchPreference mEnableBottomToolbar = (ChromeSwitchPreference) findPreference("enable_bottom_toolbar");
+        ChromeBaseCheckBoxPreference mEnableBottomToolbar = (ChromeBaseCheckBoxPreference) findPreference("enable_bottom_toolbar");
         mEnableBottomToolbar.setOnPreferenceChangeListener(this);
         if (DeviceFormFactor.isTablet()) {
              this.getPreferenceScreen().removePreference(mEnableBottomToolbar);
         }
-        ChromeSwitchPreference mOverscrollButton = (ChromeSwitchPreference) findPreference("enable_overscroll_button");
+        ChromeBaseCheckBoxPreference mOverscrollButton = (ChromeBaseCheckBoxPreference) findPreference("enable_overscroll_button");
         mOverscrollButton.setOnPreferenceChangeListener(this);
         mOverscrollButton.setChecked(ContextUtils.getAppSharedPreferences().getBoolean("enable_overscroll_button", true));
         if (DeviceFormFactor.isTablet()) {
              this.getPreferenceScreen().removePreference(mOverscrollButton);
         }
 
-        mKeepToolbar = (ChromeSwitchPreference) findPreference("keep_toolbar_visible");
+        mKeepToolbar = (ChromeBaseCheckBoxPreference) findPreference("keep_toolbar_visible");
         mKeepToolbar.setOnPreferenceChangeListener(this);
         String KeepToolbarSetting = ContextUtils.getAppSharedPreferences().getString("keep_toolbar_visible_configuration", "unknown");
         if (KeepToolbarSetting.equals("unknown")) {
