@@ -130,7 +130,7 @@
         android:order="13"
         android:title="@string/prefs_safety_check"
         app:iconTint="@color/default_icon_color_tint_list"/>
-    <Preference
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:key="notifications"
         android:order="15"
         android:icon="@drawable/ics_notifications"
@@ -141,20 +141,20 @@
         android:key="advanced_section"
         android:order="17"
         android:title="@string/prefs_section_advanced"/>
-    <Preference
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
         android:key="toolbar_shortcut"
         android:order="11"
         android:title="@string/toolbar_shortcut"
         app:iconTint="@color/default_icon_color_tint_list"/>
-    <Preference
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.accessibility.settings.AccessibilitySettings"
         android:key="accessibility"
         android:order="15"
         android:icon="@drawable/ics_accessibility"
         android:title="@string/prefs_accessibility"
         app:iconTint="@color/default_icon_color_tint_list"/>
-    <Preference
+    <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.components.browser_ui.site_settings.SiteSettings"
         android:key="content_settings"
         android:order="13"
