@@ -84,7 +84,7 @@
     <PreferenceCategory
         android:key="appearence_section"
         android:order="11"
-        android:title="@string/appearence_preferences"/>
+        android:title="@string/appearance_preferences"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
         android:key="nightmode"
@@ -128,7 +128,7 @@
         android:key="privacy"
         android:order="13"
         android:icon="@drawable/ics_privacy_security"
-        android:title="@string/privacy_preferences"
+        android:title="@string/preferences_privacy"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.safety_check.SafetyCheckSettingsFragment"
