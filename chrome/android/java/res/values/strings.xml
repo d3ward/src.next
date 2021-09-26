@@ -72,6 +72,10 @@
     <string name="preferences_restart_now">RESTART NOW</string>
     <string name="preferences_restart_later">Later</string>
 
+    <string name="prefs_online_shopping">Online Shopping</string>
+    <string name="preferences_devoptions">Developer options</string>
+    <string name="preferences_privacy">Privacy Options</string>
+    <string name="preferences_toolbar">Toolbar</string>
     <string name="preferences_translator">Translator</string>
     <string name="preferences_tabswitcher">Tab switcher</string>
     <string name="preferences_nightmode">Night mode</string>

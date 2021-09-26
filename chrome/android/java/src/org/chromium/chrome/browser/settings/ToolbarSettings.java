@@ -41,7 +41,7 @@ public class ToolbarSettings extends PreferenceFragmentCompat implements Prefere
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        getActivity().setTitle(R.string.preferences_tabswitcher);
+        getActivity().setTitle(R.string.preferences_toolbar);
         SettingsUtils.addPreferencesFromResource(this, R.xml.toolbar_preferences);
 
         mTabSwitcherButtonPref = (ChromeSwitchPreference) findPreference("tabswitcher_opens_contextual_menu");

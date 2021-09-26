@@ -64,7 +64,7 @@
     <PreferenceCategory
         android:key="online_shopping_section"
         android:order="9"
-        android:title="Online Shopping"/>
+        android:title="@string/prefs_online_shopping"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.autofill.settings.AutofillProfilesFragment"
         android:key="autofill_addresses"
@@ -84,7 +84,7 @@
     <PreferenceCategory
         android:key="appearence_section"
         android:order="11"
-        android:title="Customization and appearence"/>
+        android:title="@string/appearence_preferences"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.settings.NightModeSettings"
         android:key="nightmode"
@@ -111,7 +111,7 @@
         android:key="toolbar_options"
         android:order="11"
         android:icon="@drawable/ics_toolbar_shortcut"
-        android:title="Toolbar Options"
+        android:title="@string/preferences_toolbar"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <Preference
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
@@ -122,13 +122,13 @@
      <PreferenceCategory
         android:key="privacy_section"
         android:order="12"
-        android:title="Privacy and Security"/>
+        android:title="@string/prefs_privacy_security"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.privacy.settings.PrivacySettings"
         android:key="privacy"
         android:order="13"
         android:icon="@drawable/ics_privacy_security"
-        android:title="@string/prefs_privacy_security"
+        android:title="@string/privacy_preferences"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.safety_check.SafetyCheckSettingsFragment"
@@ -195,7 +195,7 @@
         android:key="developer"
         android:order="22"
         android:icon="@drawable/ics_dev_options"
-        android:title="Developer options"
+        android:title="@string/preferences_devoptions"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.about_settings.AboutChromeSettings"
