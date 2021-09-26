@@ -89,7 +89,8 @@
         android:key="ui_theme"
         android:order="11"
         android:icon="@drawable/ics_theme"
-        android:title="@string/theme_settings" />
+        android:title="@string/theme_settings"
+        app:iconTint="@color/default_icon_color_tint_list" />
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.settings.TabSwitcherSettings"
         android:key="tabswitcher"
@@ -123,11 +124,6 @@
         android:order="15"
         android:icon="@drawable/ics_notifications"
         android:title="@string/prefs_notifications"/>
-    <Preference
-        android:fragment="org.chromium.chrome.browser.night_mode.settings.ThemeSettingsFragment"
-        android:key="ui_theme"
-        android:order="11"
-        android:title="@string/theme_settings" />
 
     <PreferenceCategory
         android:key="advanced_section"
@@ -155,7 +151,8 @@
         android:key="translate"
         android:order="20"
         android:icon="@drawable/ic_translate_r"
-        android:title="@string/main_menu_translate"/>
+        android:title="@string/main_menu_translate"
+        />
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.datareduction.settings.DataReductionPreferenceFragment"
         android:key="data_reduction"
