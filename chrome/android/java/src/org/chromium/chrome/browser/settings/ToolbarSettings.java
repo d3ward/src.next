@@ -33,26 +33,16 @@ import android.content.SharedPreferences;
 /**
  * Fragment to keep track of all the toolbar related preferences.
  */
-public class ToolbarSettings
-        extends PreferenceFragmentCompat implements Preference.OnPreferenceChangeListener {
+public class ToolbarSettings extends PreferenceFragmentCompat implements Preference.OnPreferenceChangeListener {
    
-
     private ChromeSwitchPreference mKeepToolbar;
     private ChromeSwitchPreference mSideSwipePref;
     private ChromeSwitchPreference mTabSwitcherButtonPref;
-    private boolean mRecordFontSizeChangeOnStop;
     private Activity mActivity;
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        //getActivity().setTitle(R.string.prefs_accessibility);
-        getActivity().setTitle("Toolbar Options");
-        setDivider(null);
-    }
-
-    @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        getActivity().setTitle(R.string.preferences_tabswitcher);
         SettingsUtils.addPreferencesFromResource(this, R.xml.toolbar_preferences);
 
         mTabSwitcherButtonPref = (ChromeSwitchPreference) findPreference("tabswitcher_opens_contextual_menu");
@@ -120,7 +110,6 @@ public class ToolbarSettings
         } else if ("enable_bottom_toolbar".equals(preference.getKey())) {
             AskForRelaunch(getActivity());
         }
-
         return true;
     }
 
