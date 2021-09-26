@@ -36,7 +36,6 @@ import android.content.SharedPreferences;
 public class ToolbarSettings extends PreferenceFragmentCompat implements Preference.OnPreferenceChangeListener {
    
     private ChromeBaseCheckBoxPreference mKeepToolbar;
-    private ChromeBaseCheckBoxPreference mSideSwipePref;
     private ChromeBaseCheckBoxPreference mTabSwitcherButtonPref;
     private Activity mActivity;
 
@@ -47,10 +46,6 @@ public class ToolbarSettings extends PreferenceFragmentCompat implements Prefere
 
         mTabSwitcherButtonPref = (ChromeBaseCheckBoxPreference) findPreference("tabswitcher_opens_contextual_menu");
         mTabSwitcherButtonPref.setOnPreferenceChangeListener(this);
-
-        mSideSwipePref = (ChromeBaseCheckBoxPreference) findPreference("side_swipe_mode_enabled");
-        mSideSwipePref.setOnPreferenceChangeListener(this);
-        mSideSwipePref.setChecked(ContextUtils.getAppSharedPreferences().getBoolean("side_swipe_mode_enabled", true));
 
         ChromeBaseCheckBoxPreference mEnableBottomToolbar = (ChromeBaseCheckBoxPreference) findPreference("enable_bottom_toolbar");
         mEnableBottomToolbar.setOnPreferenceChangeListener(this);
