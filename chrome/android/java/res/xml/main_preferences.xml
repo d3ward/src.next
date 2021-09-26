@@ -108,6 +108,7 @@
         android:title="@string/preferences_tabswitcher"
         app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
+    android:fragment="org.chromium.chrome.browser.settings.ToolbarSettings"
         android:key="toolbar_options"
         android:order="11"
         android:icon="@drawable/ics_toolbar_shortcut"

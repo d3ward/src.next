@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 The Chromium Authors. All rights reserved.
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file. -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="keep_address_bar_content"
+        android:summary="@string/accessibility_preferences_keep_address_bar_content_summary"
+        android:title="@string/accessibility_preferences_keep_address_bar_content_title" />
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="keep_toolbar_visible"
+        android:summary="@string/accessibility_keep_toolbar_visible_summary"
+        android:title="@string/accessibility_keep_toolbar_visible_title" />
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="enable_bottom_toolbar"
+        android:summary="@string/accessibility_preferences_enable_bottom_toolbar_summary"
+        android:title="@string/accessibility_preferences_enable_bottom_toolbar_title" />
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="enable_overscroll_button"
+        android:summary="@string/accessibility_preferences_enable_overscroll_button_summary"
+        android:title="@string/accessibility_preferences_enable_overscroll_button_title" />
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="tabswitcher_opens_contextual_menu"
+        android:summary="@string/accessibility_preferences_holding_tabswitcher_opens_contextual_menu_summary"
+        android:title="@string/accessibility_preferences_holding_tabswitcher_opens_contextual_menu_summary" />
+
+    <org.chromium.components.browser_ui.settings.ChromeSwitchPreference
+        android:key="up_swipe_mode_enabled"
+        android:summary="@string/accessibility_preferences_enable_up_swipe_summary"
+        android:title="@string/accessibility_preferences_enable_up_swipe_title" />
+
+</PreferenceScreen>
