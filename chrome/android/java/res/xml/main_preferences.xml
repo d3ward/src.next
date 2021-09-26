@@ -109,7 +109,7 @@
         android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
         android:key="toolbar_shortcut"
         android:order="11"
-        android:icon="@drawable/ic_extensions"
+        android:icon="@drawable/ics_toolbar_shortcut"
         android:title="@string/toolbar_shortcut"
         app:iconTint="@color/default_icon_color_tint_list"/>
 
@@ -149,12 +149,6 @@
         android:key="advanced_section"
         android:order="17"
         android:title="@string/prefs_section_advanced"/>
-    <org.chromium.components.browser_ui.settings.ChromeBasePreference
-        android:fragment="org.chromium.chrome.browser.toolbar.adaptive.settings.AdaptiveToolbarPreferenceFragment"
-        android:key="toolbar_shortcut"
-        android:order="11"
-        android:title="@string/toolbar_shortcut"
-        app:iconTint="@color/default_icon_color_tint_list"/>
     <org.chromium.components.browser_ui.settings.ChromeBasePreference
         android:fragment="org.chromium.chrome.browser.accessibility.settings.AccessibilitySettings"
         android:key="accessibility"
