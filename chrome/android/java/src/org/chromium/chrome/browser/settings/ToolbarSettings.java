@@ -1,6 +1,5 @@
-package org.chromium.chrome.browser.accessibility.settings;
+package org.chromium.chrome.browser.settings;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 
@@ -8,7 +7,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.appcompat.app.AlertDialog;
 
-import org.chromium.chrome.browser.ApplicationLifetime;
 
 import org.chromium.chrome.R;
 import org.chromium.chrome.browser.preferences.ChromePreferenceKeys;
@@ -25,14 +23,11 @@ import android.app.Activity;
 import org.chromium.base.ContextUtils;
 import android.content.DialogInterface;
 
-import org.chromium.base.ContextUtils;
 import org.chromium.base.SysUtils;
 import org.chromium.base.Log;
 import org.chromium.ui.base.DeviceFormFactor;
 import android.content.SharedPreferences;
 
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Fragment to keep track of all the toolbar related preferences.
@@ -45,7 +40,6 @@ public class ToolbarSettings
     private ChromeSwitchPreference mSideSwipePref;
     private ChromeSwitchPreference mTabSwitcherButtonPref;
     private boolean mRecordFontSizeChangeOnStop;
-    private Timer mTimer;
     private Activity mActivity;
 
     @Override
