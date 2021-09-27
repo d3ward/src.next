@@ -137,21 +137,20 @@ public class PersonalizeResults {
       +"mnbtn.id = 'mnbtn3';mnbtn.innerHTML = '<div class=\"bar1\"></div><div class=\"bar2\"></div><div class=\"bar3\"></div>';"
       +"console.log('mnbtn initialized ');"
       +"console.log(mnbtn);"
-     +"waitForElementToDisplay(\".O-j\",function(){alert(document.querySelector(\".O-j\"));"
-      +"var mojbar = document.querySelector(\".O-j\");"
-      +"console.log(mojbar);"
-      +"console.log(mojbar.firstChild);"
-      +"mojbar.insertBefore(mnbtn, mojbar.firstChild);"
-      +"console.log('mnbtn inserted');"
-      +"console.log('add event listener to mnbtn');"
-       +"mnbtn.addEventListener('click',()=>{if(statusS){mnbtn.classList.add('change');sdnv.classList.add('showNav');}else{mnbtn.classList.remove('change');sdnv.classList.remove('showNav');}statusS=!statusS;});"
+      +"waitForElementToDisplay(\".O-j\",function(){alert(document.querySelector(\".O-j\"));"
+         +"var mojbar = document.querySelector(\".O-j\");"
+         +"console.log(mojbar);"
+         +"console.log(mojbar.firstChild);"
+         +"mojbar.insertBefore(mnbtn, mojbar.firstChild);"
+         +"console.log('mnbtn inserted');"
+         +"console.log('add event listener to mnbtn');"
+         +"mnbtn.addEventListener('click',()=>{if(statusS){mnbtn.classList.add('change');sdnv.classList.add('showNav');}else{mnbtn.classList.remove('change');sdnv.classList.remove('showNav');}statusS=!statusS;});"
       
-      +"mojbar.insertAdjacentHTML('beforebegin','<span class=\"asterisk\">*</span>');"
-       +"console.log('add asterisk');"
-      +"nptsrc.addEventListener('keypress',(evt)=>{if(evt.keyCode == 13){mnbtn.classList.remove('change');sdnv.classList.remove('showNav');statusS=true;}});"
+         +"mojbar.insertAdjacentHTML('beforebegin','<span class=\"asterisk\">*</span>');"
+         +"console.log('add asterisk');"
+         +"nptsrc.addEventListener('keypress',(evt)=>{if(evt.keyCode == 13){mnbtn.classList.remove('change');sdnv.classList.remove('showNav');statusS=true;}});"
      
-      
-      +"console.log(\"Inject the elements\");},1000,20000);"
+         +"console.log(\"Inject the elements\");},1000,20000);"
    +"}else{console.log(\"CWS Mobile Script already injected\");}"
 +"}); })();";
 
