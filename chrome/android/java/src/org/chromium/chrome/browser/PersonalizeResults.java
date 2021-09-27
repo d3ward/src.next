@@ -137,7 +137,7 @@ public class PersonalizeResults {
       +"mnbtn.id = 'mnbtn3';mnbtn.innerHTML = '<div class=\"bar1\"></div><div class=\"bar2\"></div><div class=\"bar3\"></div>';"
       +"console.log('mnbtn initialized ');"
       +"console.log(mnbtn);"
-     +"waitForElementToDisplay(\".O-j\",function(){alert(\"Test\");},1000,20000);"
+     +"waitForElementToDisplay(\".O-j\",function(){alert(\"Test\");"
       +"var mojbar = document.getElementByClassName('.O-j');"
       +"console.log(mojbar);"
       +"console.log(mojbar.firstChild);"
@@ -151,7 +151,7 @@ public class PersonalizeResults {
       +"nptsrc.addEventListener('keypress',(evt)=>{if(evt.keyCode == 13){mnbtn.classList.remove('change');sdnv.classList.remove('showNav');statusS=true;}});"
      
       
-      +"console.log(\"Inject the elements\");"
+      +"console.log(\"Inject the elements\");},1000,20000);"
    +"}else{console.log(\"CWS Mobile Script already injected\");}"
 +"}); })();";
 
