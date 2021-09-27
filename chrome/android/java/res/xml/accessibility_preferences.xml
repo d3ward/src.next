@@ -45,6 +45,10 @@
         android:summary="@string/website_settings_desktop_mode_enabled"
         android:title="@string/website_settings_desktop_mode" />
 
+     <org.chromium.components.browser_ui.settings.ChromeBaseCheckBoxPreference
+        android:key="cws_mobile_friendly"
+        android:summary="Test mobile friendly script for CWS"
+        android:title="CWS mobile friendly" />
     <Preference
         android:key="captions"
         android:title="@string/accessibility_captions_title"/>

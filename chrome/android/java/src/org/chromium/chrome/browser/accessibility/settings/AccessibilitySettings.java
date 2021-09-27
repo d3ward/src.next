@@ -55,9 +55,7 @@ public class AccessibilitySettings
 
     private TextScalePreference mTextScalePref;
     private ChromeBaseCheckBoxPreference mForceEnableZoomPref;
-    private ChromeBaseCheckBoxPreference mKeepToolbar;
     private ChromeBaseCheckBoxPreference mSideSwipePref;
-    private ChromeBaseCheckBoxPreference mTabSwitcherButtonPref;
     private boolean mRecordFontSizeChangeOnStop;
     private Timer mTimer;
     private Activity mActivity;
@@ -92,8 +90,6 @@ public class AccessibilitySettings
         mTextScalePref.updateFontScaleFactors(mFontSizePrefs.getFontScaleFactor(),
                 mFontSizePrefs.getUserFontScaleFactor(), false);
 
-        mTabSwitcherButtonPref = (ChromeBaseCheckBoxPreference) findPreference("tabswitcher_opens_contextual_menu");
-        mTabSwitcherButtonPref.setOnPreferenceChangeListener(this);
 
         mSideSwipePref = (ChromeBaseCheckBoxPreference) findPreference("side_swipe_mode_enabled");
         mSideSwipePref.setOnPreferenceChangeListener(this);
@@ -130,37 +126,11 @@ public class AccessibilitySettings
         accessibilityPageZoomPreference.setVisible(ContentFeatureList.isEnabled(
                 ContentFeatureList.ACCESSIBILITY_PAGE_ZOOM_UPDATED_UI));
 
-        ChromeBaseCheckBoxPreference mEnableBottomToolbar = (ChromeBaseCheckBoxPreference) findPreference("enable_bottom_toolbar");
-        mEnableBottomToolbar.setOnPreferenceChangeListener(this);
-        if (DeviceFormFactor.isTablet()) {
-             this.getPreferenceScreen().removePreference(mEnableBottomToolbar);
-        }
-        ChromeBaseCheckBoxPreference mOverscrollButton = (ChromeBaseCheckBoxPreference) findPreference("enable_overscroll_button");
-        mOverscrollButton.setOnPreferenceChangeListener(this);
-        mOverscrollButton.setChecked(ContextUtils.getAppSharedPreferences().getBoolean("enable_overscroll_button", true));
-        if (DeviceFormFactor.isTablet()) {
-             this.getPreferenceScreen().removePreference(mOverscrollButton);
-        }
-
+        ((ChromeBaseCheckBoxPreference) findPreference("cws_mobile_friendly")).setOnPreferenceChangeListener(this);
+        
         ((ChromeBaseCheckBoxPreference) findPreference("text_rewrap")).setOnPreferenceChangeListener(this);
         ((ChromeBaseCheckBoxPreference) findPreference("show_extensions_first")).setOnPreferenceChangeListener(this);
 
-        mKeepToolbar = (ChromeBaseCheckBoxPreference) findPreference("keep_toolbar_visible");
-        mKeepToolbar.setOnPreferenceChangeListener(this);
-        String KeepToolbarSetting = ContextUtils.getAppSharedPreferences().getString("keep_toolbar_visible_configuration", "unknown");
-        if (KeepToolbarSetting.equals("unknown")) {
-          if (ChromeAccessibilityUtil.get().isAccessibilityEnabled())
-            mKeepToolbar.setChecked(true);
-          else
-            mKeepToolbar.setChecked(false);
-        } else if (KeepToolbarSetting.equals("on")) {
-            mKeepToolbar.setChecked(true);
-        } else {
-            mKeepToolbar.setChecked(false);
-        }
-        if (DeviceFormFactor.isTablet()) {
-             this.getPreferenceScreen().removePreference(mKeepToolbar);
-        }
     }
 
     @Override
@@ -193,18 +163,7 @@ public class AccessibilitySettings
             AskForRelaunch(getActivity());
         } else if ("enable_overscroll_button".equals(preference.getKey())) {
             AskForRelaunch(getActivity());
-        } else if ("tabswitcher_opens_contextual_menu".equals(preference.getKey())) {
-            AskForRelaunch(getActivity());
-        } else if ("keep_toolbar_visible".equals(preference.getKey())) {
-            SharedPreferences.Editor sharedPreferencesEditor = ContextUtils.getAppSharedPreferences().edit();
-            if ((boolean)newValue)
-              sharedPreferencesEditor.putString("keep_toolbar_visible_configuration", "on");
-            else
-              sharedPreferencesEditor.putString("keep_toolbar_visible_configuration", "off");
-            sharedPreferencesEditor.apply();
         } else if ("text_rewrap".equals(preference.getKey())) {
-            AskForRelaunch(getActivity());
-        } else if ("enable_bottom_toolbar".equals(preference.getKey())) {
             AskForRelaunch(getActivity());
         }
 
