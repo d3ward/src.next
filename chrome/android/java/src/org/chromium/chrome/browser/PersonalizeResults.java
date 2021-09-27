@@ -121,6 +121,7 @@ public class PersonalizeResults {
 +"(function() {"
 +" if (!document.location.href.includes('https://chrome.google.com/webstore')) {return;}"
 +MAKE_USER_AGENT_WRITABLE
++"function waitForElementToDisplay(selector,callback,checkFrequencyInMs,timeoutInMs){var startTimeInMs=Date.now();!function loopSearch(){null==document.querySelector(selector)?setTimeout((function(){timeoutInMs&&Date.now()-startTimeInMs>timeoutInMs||loopSearch()}),checkFrequencyInMs):callback()}()}"
 +"window.navigator.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.25 Safari/537.36';"
 +"window.addEventListener(\"load\", function () { console.log(\"Inject cws_mobile_script \"); "
 +"if(document.getElementById('lrdnjct') == undefined){"
@@ -136,7 +137,7 @@ public class PersonalizeResults {
       +"mnbtn.id = 'mnbtn3';mnbtn.innerHTML = '<div class=\"bar1\"></div><div class=\"bar2\"></div><div class=\"bar3\"></div>';"
       +"console.log('mnbtn initialized ');"
       +"console.log(mnbtn);"
-     
+     +"waitForElementToDisplay(\".O-j\",function(){alert(\"Test\");},1000,20000);"
       +"var mojbar = document.getElementByClassName('.O-j');"
       +"console.log(mojbar);"
       +"console.log(mojbar.firstChild);"
