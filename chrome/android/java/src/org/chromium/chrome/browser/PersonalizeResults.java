@@ -122,7 +122,7 @@ public class PersonalizeResults {
 +" if (!document.location.href.includes('https://chrome.google.com/webstore')) {return;}"
 +MAKE_USER_AGENT_WRITABLE
 +"window.navigator.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.25 Safari/537.36';"
-+"window.addEventListener('load', function () { console.log(\"Inject cws_mobile_script \"); "
++"document.addEventListener(\"DOMContentLoaded\", function () { console.log(\"Inject cws_mobile_script \"); "
 +"if(document.getElementById('lrdnjct') == undefined){"
 +"if (document.location.pathname == '/webstore/unsupported') {document.location = '/webstore/';}"
 +"document.querySelector(\"meta[name=viewport]\").setAttribute(\"content\", \"width=device-width, initial-scale=1.0\");"
