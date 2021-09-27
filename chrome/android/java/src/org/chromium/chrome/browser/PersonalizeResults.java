@@ -122,7 +122,7 @@ public class PersonalizeResults {
 +" if (!document.location.href.includes('https://chrome.google.com/webstore')) {return;}"
 +MAKE_USER_AGENT_WRITABLE
 +"window.navigator.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.25 Safari/537.36';"
-+"document.addEventListener(\"DOMContentLoaded\", function () { console.log(\"Inject cws_mobile_script \"); "
++"window.addEventListener(\"load\", function () { console.log(\"Inject cws_mobile_script \"); "
 +"if(document.getElementById('lrdnjct') == undefined){"
    +"if (document.location.pathname == '/webstore/unsupported') {document.location = '/webstore/';}"
       +"document.querySelector(\"meta[name=viewport]\").setAttribute(\"content\", \"width=device-width, initial-scale=1.0\");"
@@ -132,6 +132,7 @@ public class PersonalizeResults {
       +"console.log('CSS injected');"
       +"var sdnv = document.querySelector('.F-n-J');var mnbtn = document.createElement('div');var statusS=true;var nptsrc=document.querySelector('.h-n-j-Qc-lc');"
       +"console.log('Variables created');"
+      +"var lrdnjct = document.createElement('div');lrdnjct.id='lrdnjct';document.body.appendChild(lrdnjct);"
       +"mnbtn.id = 'mnbtn3';mnbtn.innerHTML = '<div class=\"bar1\"></div><div class=\"bar2\"></div><div class=\"bar3\"></div>';"
       +"console.log('mnbtn initialized ');"
       +"console.log(mnbtn);"
@@ -148,7 +149,7 @@ public class PersonalizeResults {
        +"console.log('add asterisk');"
       +"nptsrc.addEventListener('keypress',(evt)=>{if(evt.keyCode == 13){mnbtn.classList.remove('change');sdnv.classList.remove('showNav');statusS=true;}});"
      
-      +"var lrdnjct = document.createElement('div');lrdnjct.id='lrdnjct';document.body.appendChild(lrdnjct);"
+      
       +"console.log(\"Inject the elements\");"
    +"}else{console.log(\"CWS Mobile Script already injected\");}"
 +"}); })();";
